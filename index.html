@@ -1,0 +1,2427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexWork Hire Resources Landing Page</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f8f7ff;
+        color: #121212;
+      }
+
+      .floating-card {
+        transition: all 0.3s ease;
+      }
+
+      .floating-card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background-color: #7b7dfc !important;
+      }
+
+      /* .floating-card:hover span */
+      .floating-card:hover small,
+      .floating-card:hover h6,
+      .floating-card:hover p,
+      .floating-card:hover h3,
+      .floating-card:hover h4,
+      .floating-card:hover h5,
+      .floating-card:hover h2 {
+        color: #fff !important;
+      }
+
+      .industry-card:hover,
+      .process-card:hover,
+      .choose-card:hover {
+        transform: translateY(-5px);
+      }
+
+      @media (max-width: 991px) {
+        .hero h1 {
+          font-size: 42px;
+        }
+
+        .floating-card {
+          display: none;
+        }
+
+        .hero {
+          text-align: center;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+      }
+
+      /* =========================================================
+RESPONSIVE SYSTEM — FLEXWORK LANDING PAGE
+========================================================= */
+
+      /* ---------- GLOBAL RESPONSIVE FIXES ---------- */
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .hero h3 {
+        max-width: 650px;
+      }
+
+      section {
+        overflow: hidden;
+      }
+
+      /* Common Utility */
+
+      .responsive-center {
+        text-align: center;
+      }
+
+      /* =========================================================
+LARGE DEVICES (1200px and below)
+========================================================= */
+
+      @media (max-width: 1200px) {
+        /* Floating cards scale down */
+
+        .card-1,
+        .card-2,
+        .floating-card {
+          transform: scale(0.92);
+        }
+
+        .card-2 {
+          right: -4%;
+        }
+
+        /* Hero spacing */
+
+        .hero {
+          padding-top: 40px;
+        }
+
+        /* Comparison section */
+
+        .position-absolute.top-50.start-50.translate-middle {
+          transform: translate(-55%, -50%);
+        }
+
+        /* Hiring table */
+
+        .table td {
+          white-space: nowrap;
+          font-size: 14px;
+        }
+      }
+
+      /* =========================================================
+TABLET LANDSCAPE (992px and below)
+========================================================= */
+
+      @media (max-width: 992px) {
+        /* Navbar */
+
+        .navbar-collapse {
+          background: white;
+          padding: 20px;
+          border-radius: 20px;
+          margin-top: 20px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Hero section */
+
+        .hero {
+          text-align: center;
+          padding-top: 40px;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .hero h3 {
+          margin-inline: auto;
+        }
+
+        /* Hide floating cards */
+
+        .floating-card {
+          display: none !important;
+        }
+
+        /* Hero image */
+
+        .hero-image {
+          margin-top: 50px;
+        }
+
+        /* Trusted logos */
+
+        .logo-strip,
+        .d-flex.align-items-center.justify-content-between.flex-wrap.gap-4 {
+          justify-content: center !important;
+          gap: 30px !important;
+        }
+
+        /* Industries cards */
+
+        .industry-card,
+        .process-card {
+          padding: 30px 20px;
+        }
+
+        /* Why choose section */
+
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-3 {
+          width: 100%;
+        }
+
+        /* Comparison card */
+
+        .position-absolute.top-50.start-50.translate-middle {
+          display: none !important;
+        }
+
+        /* Comparison columns */
+
+        .col-md-6 {
+          width: 100%;
+        }
+
+        /* Add spacing between stacked columns */
+
+        .col-md-6:first-child {
+          border-right: none !important;
+          border-bottom: 1px solid #f1eff7;
+        }
+
+        /* FlexWork stats card */
+
+        .bg-primary.bg-gradient {
+          margin-top: 10px;
+        }
+
+        /* Hiring models */
+
+        .table-responsive {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        /* CTA card */
+
+        .bg-light.rounded-5.p-4.h-100.d-flex.flex-column.justify-content-between.overflow-hidden {
+          margin-top: 20px;
+        }
+
+        /* Testimonial section */
+
+        .text-white.rounded-4.px-4.px-lg-5.py-4.position-relative.overflow-hidden {
+          text-align: center;
+        }
+
+        /* Testimonial arrows */
+
+        .position-absolute.top-50.start-0.translate-middle-y,
+        .position-absolute.top-50.end-0.translate-middle-y {
+          display: none;
+        }
+
+        /* Testimonial image */
+
+        .col-lg-3.text-center img {
+          max-height: 240px !important;
+          object-fit: cover !important;
+        }
+      }
+
+      /* =========================================================
+TABLET PORTRAIT & LARGE MOBILE (768px and below)
+========================================================= */
+
+      @media (max-width: 768px) {
+        /* Global spacing */
+
+        section {
+          padding-top: 60px !important;
+          padding-bottom: 60px !important;
+        }
+
+        /* Hero */
+
+        .hero h3 {
+          font-size: 42px;
+          line-height: 1.1;
+        }
+
+        .hero p {
+          font-size: 17px !important;
+        }
+
+        /* Hero buttons */
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-buttons a {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        /* Features below hero */
+
+        .feature-box {
+          justify-content: center;
+          text-align: left;
+        }
+
+        /* Trusted companies text */
+
+        .d-flex.align-items-center.gap-3 {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        /* Industries */
+
+        .industry-card,
+        .floating-card {
+          margin-bottom: 20px;
+        }
+
+        /* Process cards */
+
+        .process-card {
+          padding: 30px 20px !important;
+        }
+
+        /* Why choose */
+
+        .bg-white.rounded-5.p-4.floating-card {
+          max-width: 100% !important;
+        }
+
+        /* Comparison section */
+
+        .row.g-0.position-relative {
+          flex-direction: column;
+        }
+
+        /* Comparison typography */
+
+        .row.g-0.position-relative h5 {
+          text-align: center;
+        }
+
+        /* Stats card */
+
+        .card.border-0.rounded-5.text-white.p-4.h-100.shadow-sm.bg-primary.bg-gradient {
+          margin-top: 10px;
+        }
+
+        /* Hiring models */
+
+        .d-flex.flex-wrap.gap-2 {
+          justify-content: center;
+        }
+
+        /* Table */
+
+        table td {
+          min-width: 180px;
+        }
+
+        /* Talk to expert card */
+
+        .d-flex.justify-content-between.gap-3 {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .d-flex.justify-content-between.gap-3 img {
+          align-self: center;
+          margin-top: 20px;
+        }
+
+        /* Testimonial */
+
+        .bg-white.text-dark.rounded-4.px-4.py-3.mx-lg-5.text-center.shadow-sm {
+          margin-inline: 0 !important;
+        }
+      }
+
+      /* =========================================================
+MOBILE PORTRAIT (576px and below)
+========================================================= */
+
+      @media (max-width: 576px) {
+        /* Navbar */
+
+        .navbar-brand {
+          font-size: 28px !important;
+        }
+
+        /* Hero */
+
+        .hero h3 {
+          font-size: 34px;
+        }
+
+        .hero-badge {
+          font-size: 12px !important;
+        }
+
+        /* Feature boxes */
+
+        .feature-box {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        /* Industries */
+
+        .industry-card,
+        .floating-card {
+          padding: 24px 18px !important;
+        }
+
+        /* Section titles */
+
+        h2 {
+          font-size: 28px !important;
+          line-height: 1.3;
+        }
+
+        /* Comparison section */
+
+        .col-md-6.p-4.p-lg-5,
+        .col-md-6 .p-4.p-lg-5 {
+          padding: 30px 20px !important;
+        }
+
+        /* Table */
+
+        .table td {
+          font-size: 13px;
+          padding: 14px !important;
+        }
+
+        /* Buttons */
+
+        .btn {
+          width: 100%;
+        }
+
+        /* Testimonial */
+
+        .text-white.rounded-4.px-4.px-lg-5.py-4.position-relative.overflow-hidden {
+          padding: 30px 20px !important;
+        }
+
+        /* Testimonial quote */
+
+        .fw-semibold.mb-4.text-secondary {
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        /* Footer spacing */
+
+        footer {
+          text-align: center;
+        }
+      }
+
+      /* =========================================================
+MOBILE LANDSCAPE
+========================================================= */
+
+      @media (max-height: 500px) and (orientation: landscape) {
+        /* Hero */
+
+        .hero {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        .hero h3 {
+          font-size: 32px;
+        }
+
+        /* Reduce spacing */
+
+        section {
+          padding-top: 40px !important;
+          padding-bottom: 40px !important;
+        }
+
+        /* Hide unnecessary large visuals */
+
+        .floating-card {
+          display: none !important;
+        }
+
+        /* Testimonial image */
+
+        .col-lg-3.text-center img {
+          max-height: 120px !important;
+        }
+      }
+
+      /* =========================================================
+TABLET LANDSCAPE SPECIFIC
+========================================================= */
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .hero h3 {
+          font-size: 54px;
+        }
+
+        .floating-card {
+          transform: scale(0.8);
+        }
+
+        .card-2 {
+          right: -12%;
+        }
+      }
+
+      /* =========================================================
+PORTRAIT TABLETS
+========================================================= */
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+        .hero {
+          text-align: center;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .floating-card {
+          display: none !important;
+        }
+
+        .hero-image {
+          margin-top: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-transparent py-4">
+      <div class="container">
+        <a
+          class="navbar-brand fs-2 fw-extrabold"
+          href="#"
+          style="color: #7b7dfc"
+        >
+          <i class="bi bi-camera"></i> FlexWork
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-body mx-2" href="#"
+                >Our Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-body mx-2" href="#"
+                >Who We Are</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-body mx-2" href="#"
+                >How We Work</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-body mx-2" href="#"
+                >Resources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-body mx-2" href="#"
+                >Pricing</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="fw-semibold text-dark text-decoration-none"
+              >Log In</a
+            >
+            <a
+              href="#"
+              class="btn btn-warning rounded-pill px-4 py-2 fw-semibold"
+            >
+              Post a Job →
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div
+              class="hero-badge d-inline-block bg-indigo-subtle text-indigo py-2 px-3 rounded-pill fs-6 fw-bold mb-4"
+              style="background: #ece9ff"
+            >
+              AGENT-LED HIRING. EXPERT RESULTS.
+            </div>
+
+            <h3 class="lh-1 fw-bold display-3">
+              Hire Top Tech Talent For
+              <span style="color: #7b7dfc">Hourly, Monthly</span> Or
+              Project-based <span style="color: #7b7dfc">Gigs</span>
+            </h3>
+
+            <p class="fs-5 text-secondary mt-4 mb-4">
+              You don't search. We do. Your dedicated FlexWork Agent finds,
+              vets, and shortlists the perfect experts—fast.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 hero-buttons mb-5">
+              <a
+                href="#"
+                class="btn-primary-custom border-0 text-white py-3 px-4 rounded-4 fw-semibold text-decoration-none"
+                style="background: #7b7dfc"
+              >
+                Tell Us What You Need →
+              </a>
+
+              <a
+                href="#"
+                class="btn-outline-custom border bg-white py-3 px-4 rounded-4 fw-semibold text-decoration-none"
+                style="color: #7b7dfc; border-color: #7b7dfc"
+              >
+                <i class="bi bi-play-circle"></i>
+                How It Works
+              </a>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="feature-box d-flex gap-3 align-items-center">
+                  <div
+                    class="feature-icon rounded-circle bg-indigo-subtle d-flex align-items-center justify-content-center text-primary fs-5"
+                    style="width: 48px; height: 48px; background: #edeaff"
+                  >
+                    <i class="bi bi-patch-check"></i>
+                  </div>
+
+                  <div>
+                    <h6 class="fw-bold mb-1">Pre-vetted</h6>
+                    <small>Top 3% Talent</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="feature-box d-flex gap-3 align-items-center">
+                  <div
+                    class="feature-icon rounded-circle bg-indigo-subtle d-flex align-items-center justify-content-center text-primary fs-5"
+                    style="width: 48px; height: 48px; background: #edeaff"
+                  >
+                    <i class="bi bi-clock"></i>
+                  </div>
+
+                  <div>
+                    <h6 class="fw-bold mb-1">24-48 Hour</h6>
+                    <small>Talent Match</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="feature-box d-flex gap-3 align-items-center">
+                  <div
+                    class="feature-icon rounded-circle bg-indigo-subtle d-flex align-items-center justify-content-center text-primary fs-5"
+                    style="width: 48px; height: 48px; background: #edeaff"
+                  >
+                    <i class="bi bi-wallet2"></i>
+                  </div>
+
+                  <div>
+                    <h6 class="fw-bold mb-1">No Upfront</h6>
+                    <small>Hiring Cost</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image position-relative">
+              <img
+                class="w-100 rounded-5"
+                src="hireResourcesHero.png"
+                alt="Hire Resources"
+              />
+
+              <!-- Floating Cards -->
+
+              <div
+                class="floating-card card-1 position-absolute bg-white p-4 rounded-4 shadow-sm industry-card"
+                style="top: 10%; left: 0%; width: 240px"
+              >
+                <!-- Header -->
+                <small class="text-muted fw-bold">Your FlexWork Agent</small>
+
+                <!-- Profile Section -->
+                <div class="d-flex mt-3">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Aman Kapoor"
+                    class="rounded-circle"
+                    width="48"
+                    height="48"
+                  />
+
+                  <div class="ms-3">
+                    <h6 class="fw-bold mb-0">Aman Kapoor</h6>
+                    <small class="text-muted d-block text-nowrap"
+                      >Senior Talent Advisor</small
+                    >
+
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="bg-success rounded-circle me-1"
+                        style="width: 8px; height: 8px; display: inline-block"
+                      ></span>
+                      <small class="text-success">Online</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <p class="small text-muted mt-4 mb-0 lh-base">
+                  I’ll find the right experts so you can focus on what matters.
+                </p>
+
+                <!-- Chat Button -->
+                <button
+                  class="btn rounded-circle position-absolute d-flex align-items-center justify-content-center"
+                  style="
+                    width: 42px;
+                    height: 42px;
+                    bottom: 18px;
+                    right: 18px;
+                    background: #7b7dfc;
+                  "
+                >
+                  💬
+                </button>
+              </div>
+
+              <div
+                class="floating-card card-2 position-absolute bg-white p-3 rounded-4 shadow"
+                style="top: 30%; right: -10%; width: 310px"
+              >
+                <!-- Heading -->
+                <small class="text-secondary fw-semibold d-block mb-3">
+                  Active Requirement
+                </small>
+                <h6 class="fw-bold mt-2 text-nowrap">Senior DevOps Engineer</h6>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <p class="small text-secondary mb-0">Hourly • 3-6 Months</p>
+
+                  <span
+                    class="badge rounded-pill text-warning bg-warning-subtle px-3 py-2"
+                  >
+                    In Progress
+                  </span>
+                </div>
+                <!-- Stats -->
+                <div class="row">
+                  <div class="col">
+                    <small
+                      class="text-secondary d-block text-nowrap text-start"
+                    >
+                      Matches Found
+                    </small>
+
+                    <h3 class="fw-bold mb-0">12</h3>
+                  </div>
+
+                  <div class="col">
+                    <small class="text-secondary d-block text-nowrap text-end">
+                      Interviews Scheduled
+                    </small>
+
+                    <h3 class="fw-bold mb-0">4</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="floating-card position-absolute bg-white rounded-4 shadow-sm p-3"
+                style="bottom: 15%; left: 0%; width: 240px"
+              >
+                <!-- Top Row -->
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted fw-semibold">Top Match</small>
+
+                  <span
+                    class="badge rounded-pill px-3 py-2"
+                    style="
+                      background-color: #e8fff1;
+                      color: #22c55e;
+                      font-size: 11px;
+                      font-weight: 700;
+                    "
+                  >
+                    96% Match
+                  </span>
+                </div>
+
+                <!-- Title -->
+                <h6 class="fw-bold mt-3 mb-1" style="font-size: 18px">
+                  Cloud Architect
+                </h6>
+
+                <!-- Subtitle -->
+                <p
+                  class="mb-3"
+                  style="font-size: 13px; color: #6b7280; font-weight: 500"
+                >
+                  8+ Yrs Exp. • AWS, GCP
+                </p>
+
+                <!-- Bottom avatars -->
+                <div class="d-flex align-items-center">
+                  <div class="d-flex">
+                    <img
+                      src="https://i.pravatar.cc/32?img=1"
+                      class="rounded-circle border border-white"
+                      width="32"
+                      height="32"
+                      style="margin-right: -10px"
+                    />
+
+                    <img
+                      src="https://i.pravatar.cc/32?img=2"
+                      class="rounded-circle border border-white"
+                      width="32"
+                      height="32"
+                      style="margin-right: -10px"
+                    />
+
+                    <img
+                      src="https://i.pravatar.cc/32?img=3"
+                      class="rounded-circle border border-white"
+                      width="32"
+                      height="32"
+                    />
+                  </div>
+
+                  <span
+                    class="ms-2 fw-bold"
+                    style="color: #4f46e5; font-size: 13px"
+                  >
+                    +9
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="floating-card position-absolute bg-white rounded-4 shadow-sm p-3"
+                style="bottom: 0; right: 0; width: 220px"
+              >
+                <!-- Label -->
+                <small
+                  class="fw-semibold"
+                  style="color: #8b8ba3; font-size: 12px"
+                >
+                  Time To Hire
+                </small>
+
+                <!-- Main Text -->
+                <h4
+                  class="fw-bold mt-2 mb-3"
+                  style="color: #1e1b4b; font-size: 34px; line-height: 1"
+                >
+                  24-48 hrs
+                </h4>
+
+                <!-- SVG Graph -->
+                <svg
+                  width="100%"
+                  height="55"
+                  viewBox="0 0 200 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Line -->
+                  <path
+                    d="M5 40 
+         C25 28, 35 30, 45 24
+         S75 30, 85 28
+         S115 10, 130 15
+         S155 18, 175 5"
+                    stroke="#7b7dfc"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+
+                  <!-- Dots -->
+                  <circle
+                    cx="5"
+                    cy="40"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="45"
+                    cy="24"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="85"
+                    cy="28"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="115"
+                    cy="15"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="145"
+                    cy="18"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="175"
+                    cy="5"
+                    r="3"
+                    fill="white"
+                    stroke="#7b7dfc"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex">
+              <img
+                src="https://i.pravatar.cc/32?img=1"
+                class="rounded-circle border border-white"
+                width="32"
+                height="32"
+                style="margin-right: -10px"
+              />
+
+              <img
+                src="https://i.pravatar.cc/32?img=2"
+                class="rounded-circle border border-white"
+                width="32"
+                height="32"
+                style="margin-right: -10px"
+              />
+
+              <img
+                src="https://i.pravatar.cc/32?img=2"
+                class="rounded-circle border border-white"
+                width="32"
+                height="32"
+                style="margin-right: -10px"
+              />
+
+              <img
+                src="https://i.pravatar.cc/32?img=3"
+                class="rounded-circle border border-white"
+                width="32"
+                height="32"
+              />
+            </div>
+
+            <span class="ms-2 fw-bold fs-6 text-secondary">
+              Trusted by 1,000+ companies worldwide
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <!-- Logo Strip -->
+        <div
+          class="bg-white rounded-4 shadow-sm px-5 py-4"
+          style="border: 1px solid #f1f1f4"
+        >
+          <!-- Heading -->
+          <p
+            class="text-center mb-4 fw-semibold"
+            style="font-size: 14px; color: #2b2b52"
+          >
+            Powering teams at innovative companies
+          </p>
+
+          <!-- Logos Row -->
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap gap-4"
+          >
+            <!-- Microsoft -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+              alt="Microsoft"
+              style="height: 24px; object-fit: contain"
+            />
+
+            <!-- Zapier -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zapier_logo.svg"
+              alt="Zapier"
+              style="height: 22px; object-fit: contain"
+            />
+
+            <!-- HubSpot -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HubSpot_Logo.svg"
+              alt="HubSpot"
+              style="height: 24px; object-fit: contain"
+            />
+
+            <!-- Airbnb -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+              alt="Airbnb"
+              style="height: 28px; object-fit: contain"
+            />
+
+            <!-- Dropbox -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Dropbox_Icon.svg"
+              alt="Dropbox"
+              style="height: 28px; object-fit: contain"
+            />
+
+            <!-- VMware -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg"
+              alt="VMware"
+              style="height: 22px; object-fit: contain"
+            />
+
+            <!-- Airtel -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Bharti_Airtel_Logo.svg"
+              alt="Airtel"
+              style="height: 26px; object-fit: contain"
+            />
+
+            <!-- Lenskart -->
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Lenskart_logo.png"
+              alt="Lenskart"
+              style="height: 22px; object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INDUSTRIES ================= -->
+
+    <section class="py-5" style="background: #f8f7fc">
+      <div class="container">
+        <h2
+          style="
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #171717;
+            margin-bottom: 40px;
+          "
+        >
+          Industries We Serve
+        </h2>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="bg-white py-4 px-3 text-center h-100 border border-light-subtle shadow-sm rounded-4 floating-card"
+            >
+              <div
+                class="d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"
+                style="width: 62px; height: 62px; background-color: #f3efff"
+              >
+                <i class="bi bi-display fs-3" style="color: #7b61ff"></i>
+              </div>
+
+              <h5 class="fs-6 fw-bold text-dark mb-2">SaaS & Technology</h5>
+
+              <p class="small lh-base text-secondary m-0">
+                Building the future with powerful tech
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="bg-white py-4 px-3 text-center h-100 border border-light-subtle shadow-sm rounded-4 floating-card"
+            >
+              <div
+                class="d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"
+                style="width: 62px; height: 62px; background-color: #f3efff"
+              >
+                <i class="bi bi-shield-lock fs-3" style="color: #7b61ff"></i>
+              </div>
+
+              <h5 class="fs-6 fw-bold text-dark mb-2">Fintech</h5>
+
+              <p class="small lh-base text-secondary m-0">
+                Secure, smart & scalable financial solutions
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="bg-white py-4 px-3 text-center h-100 border border-light-subtle shadow-sm rounded-4 floating-card"
+            >
+              <div
+                class="d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"
+                style="width: 62px; height: 62px; background-color: #f3efff"
+              >
+                <i class="bi bi-heart-pulse fs-3" style="color: #7b61ff"></i>
+              </div>
+
+              <h5 class="fs-6 fw-bold text-dark mb-2">Healthcare</h5>
+
+              <p class="small lh-base text-secondary m-0">
+                Better healthcare through innovation
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="bg-white py-4 px-3 text-center h-100 border border-light-subtle shadow-sm rounded-4 floating-card"
+            >
+              <div
+                class="d-flex align-items-center justify-content-center rounded-circle mx-auto mb-3"
+                style="width: 62px; height: 62px; background-color: #f3efff"
+              >
+                <i class="bi bi-cart3 fs-3" style="color: #7b61ff"></i>
+              </div>
+
+              <h5 class="fs-6 fw-bold text-dark mb-2">E-commerce</h5>
+
+              <p
+                style="
+                  font-size: 13px;
+                  line-height: 1.6;
+                  color: #666;
+                  margin: 0;
+                "
+              >
+                Powering seamless digital experiences
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="floating-card"
+              style="
+                background: #fff;
+                border-radius: 18px;
+                padding: 28px 18px;
+                text-align: center;
+                height: 100%;
+                border: 1px solid #f1eff7;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+              "
+            >
+              <div
+                style="
+                  width: 62px;
+                  height: 62px;
+                  border-radius: 50%;
+                  background: #f3efff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto 18px;
+                "
+              >
+                <i
+                  class="bi bi-book"
+                  style="font-size: 26px; color: #7b61ff"
+                ></i>
+              </div>
+
+              <h5
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: #1f1f29;
+                  margin-bottom: 10px;
+                "
+              >
+                EdTech
+              </h5>
+
+              <p
+                style="
+                  font-size: 13px;
+                  line-height: 1.6;
+                  color: #666;
+                  margin: 0;
+                "
+              >
+                Enabling learning for a better tomorrow
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="floating-card"
+              style="
+                background: #fff;
+                border-radius: 18px;
+                padding: 28px 18px;
+                text-align: center;
+                height: 100%;
+                border: 1px solid #f1eff7;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+              "
+            >
+              <div
+                style="
+                  width: 62px;
+                  height: 62px;
+                  border-radius: 50%;
+                  background: #f3efff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto 18px;
+                "
+              >
+                <i
+                  class="bi bi-camera-video"
+                  style="font-size: 26px; color: #7b61ff"
+                ></i>
+              </div>
+
+              <h5
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: #1f1f29;
+                  margin-bottom: 10px;
+                "
+              >
+                Media & Entertainment
+              </h5>
+
+              <p
+                style="
+                  font-size: 13px;
+                  line-height: 1.6;
+                  color: #666;
+                  margin: 0;
+                "
+              >
+                Creating impact at scale
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="col-lg col-md-3 col-sm-6">
+            <div
+              class="floating-card"
+              style="
+                background: #fff;
+                border-radius: 18px;
+                padding: 28px 18px;
+                text-align: center;
+                height: 100%;
+                border: 1px solid #f1eff7;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+              "
+            >
+              <div
+                style="
+                  width: 62px;
+                  height: 62px;
+                  border-radius: 50%;
+                  background: #f3efff;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto 18px;
+                "
+              >
+                <i
+                  class="bi bi-truck"
+                  style="font-size: 26px; color: #7b61ff"
+                ></i>
+              </div>
+
+              <h5
+                style="
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: #1f1f29;
+                  margin-bottom: 10px;
+                "
+              >
+                Logistics
+              </h5>
+
+              <p
+                style="
+                  font-size: 13px;
+                  line-height: 1.6;
+                  color: #666;
+                  margin: 0;
+                "
+              >
+                Optimizing operations and delivery
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>
+            How <span style="color: #7b7dfc">FlexWork</span> Finds Your Perfect
+            Experts
+          </h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg">
+            <div
+              class="process-card text-center bg-white rounded-5 p-4 h-100"
+              style="transition: 0.3s"
+            >
+              <div
+                class="process-icon mx-auto d-flex align-items-center justify-content-center bg-indigo-subtle text-indigo rounded-4 fs-3 mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="bi bi-share"></i>
+              </div>
+
+              <h6 class="fw-bold">Share Your Requirement</h6>
+              <p class="small text-muted">
+                Tell us the role, skills, experience and timeline.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg">
+            <div
+              class="process-card text-center bg-white rounded-5 p-4 h-100"
+              style="transition: 0.3s"
+            >
+              <div
+                class="process-icon mx-auto d-flex align-items-center justify-content-center bg-indigo-subtle text-indigo rounded-4 fs-3 mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="bi bi-search"></i>
+              </div>
+
+              <h6 class="fw-bold">Analyze & Align</h6>
+              <p class="small text-muted">
+                Our AI + expert agents define the best fit.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg">
+            <div
+              class="process-card text-center bg-white rounded-5 p-4 h-100"
+              style="transition: 0.3s"
+            >
+              <div
+                class="process-icon mx-auto d-flex align-items-center justify-content-center bg-indigo-subtle text-indigo rounded-4 fs-3 mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="bi bi-person-check"></i>
+              </div>
+
+              <h6 class="fw-bold">Curated Talent</h6>
+              <p class="small text-muted">
+                Dedicated agent handpicks the right experts.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg">
+            <div
+              class="process-card text-center bg-white rounded-5 p-4 h-100"
+              style="transition: 0.3s"
+            >
+              <div
+                class="process-icon mx-auto d-flex align-items-center justify-content-center bg-indigo-subtle text-indigo rounded-4 fs-3 mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="bi bi-chat-dots"></i>
+              </div>
+
+              <h6 class="fw-bold">Interview & Evaluate</h6>
+              <p class="small text-muted">
+                Meet shortlisted candidates with coordination.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg">
+            <div
+              class="process-card text-center bg-white rounded-5 p-4 h-100"
+              style="transition: 0.3s"
+            >
+              <div
+                class="process-icon mx-auto d-flex align-items-center justify-content-center bg-indigo-subtle text-indigo rounded-4 fs-3 mb-3"
+                style="width: 70px; height: 70px"
+              >
+                <i class="bi bi-rocket"></i>
+              </div>
+
+              <h6 class="fw-bold">Start & Succeed</h6>
+              <p class="small text-muted">
+                Onboard and stay supported until success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE ================= -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div
+              class="bg-white rounded-5 p-4 floating-card"
+              style="
+                max-width: 420px;
+                border: 1px solid #f1eff7;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+              "
+            >
+              <!-- Heading -->
+              <h2
+                class="fw-bold mb-4"
+                style="font-size: 34px; line-height: 1.2; color: #1f1f3d"
+              >
+                Why Companies <br />
+                Choose <span style="color: #7b7dfc">FlexWork</span>
+              </h2>
+
+              <!-- Item 1 -->
+              <div class="d-flex align-items-start mb-4">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle me-3"
+                  style="
+                    min-width: 34px;
+                    width: 34px;
+                    height: 34px;
+                    background: #f3efff;
+                  "
+                >
+                  <i
+                    class="bi bi-person-workspace"
+                    style="color: #6f5cff; font-size: 15px"
+                  ></i>
+                </div>
+
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #1f1f3d; font-size: 15px"
+                  >
+                    Dedicated FlexWork Agent
+                  </h6>
+
+                  <p
+                    class="mb-0"
+                    style="color: #8a8aa0; font-size: 13px; line-height: 1.6"
+                  >
+                    One expert. One point of contact. Complete ownership.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="d-flex align-items-start mb-4">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle me-3"
+                  style="
+                    min-width: 34px;
+                    width: 34px;
+                    height: 34px;
+                    background: #f3efff;
+                  "
+                >
+                  <i
+                    class="bi bi-patch-check"
+                    style="color: #6f5cff; font-size: 15px"
+                  ></i>
+                </div>
+
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #1f1f3d; font-size: 15px"
+                  >
+                    Pre-vetted & Verified Experts
+                  </h6>
+
+                  <p
+                    class="mb-0"
+                    style="color: #8a8aa0; font-size: 13px; line-height: 1.6"
+                  >
+                    Every professional is verified for skills, experience, and
+                    background.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="d-flex align-items-start mb-4">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle me-3"
+                  style="
+                    min-width: 34px;
+                    width: 34px;
+                    height: 34px;
+                    background: #f3efff;
+                  "
+                >
+                  <i
+                    class="bi bi-globe-americas"
+                    style="color: #6f5cff; font-size: 15px"
+                  ></i>
+                </div>
+
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #1f1f3d; font-size: 15px"
+                  >
+                    Top 3% Global Talent
+                  </h6>
+
+                  <p
+                    class="mb-0"
+                    style="color: #8a8aa0; font-size: 13px; line-height: 1.6"
+                  >
+                    We select only the top 3% from our global talent network.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="d-flex align-items-start mb-4">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle me-3"
+                  style="
+                    min-width: 34px;
+                    width: 34px;
+                    height: 34px;
+                    background: #f3efff;
+                  "
+                >
+                  <i
+                    class="bi bi-lightning-charge"
+                    style="color: #6f5cff; font-size: 15px"
+                  ></i>
+                </div>
+
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #1f1f3d; font-size: 15px"
+                  >
+                    Faster Hiring, Better Results
+                  </h6>
+
+                  <p
+                    class="mb-0"
+                    style="color: #8a8aa0; font-size: 13px; line-height: 1.6"
+                  >
+                    Get matched with the right experts in 24–48 hours.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="d-flex align-items-start">
+                <div
+                  class="d-flex align-items-center justify-content-center rounded-circle me-3"
+                  style="
+                    min-width: 34px;
+                    width: 34px;
+                    height: 34px;
+                    background: #f3efff;
+                  "
+                >
+                  <i
+                    class="bi bi-currency-dollar"
+                    style="color: #6f5cff; font-size: 15px"
+                  ></i>
+                </div>
+
+                <div>
+                  <h6
+                    class="fw-bold mb-1"
+                    style="color: #1f1f3d; font-size: 15px"
+                  >
+                    No Upfront Cost
+                  </h6>
+
+                  <p
+                    class="mb-0"
+                    style="color: #8a8aa0; font-size: 13px; line-height: 1.6"
+                  >
+                    Pay only when you start. Zero risk, 100% value.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div
+              class="bg-white rounded-5 overflow-hidden floating-card"
+              style="
+                border: 1px solid #f1eff7;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+              "
+            >
+              <div class="row g-0 position-relative">
+                <!-- LEFT SIDE -->
+                <div
+                  class="col-md-6 p-4 p-lg-5"
+                  style="border-right: 1px solid #f1eff7"
+                >
+                  <h5
+                    class="fw-bold text-center mb-5"
+                    style="color: #1f1f3d; font-size: 18px"
+                  >
+                    Traditional Hiring
+                  </h5>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start mb-4">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="
+                          color: #7b61ff;
+                          font-size: 12px;
+                          font-weight: 700;
+                        "
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      Endless resume searching
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start mb-4">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="color: #7b61ff; font-size: 12px"
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      Manual screening
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start mb-4">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="color: #7b61ff; font-size: 12px"
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      Slow hirings (weeks)
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start mb-4">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="color: #7b61ff; font-size: 12px"
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      Uncertain quality
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start mb-4">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="color: #7b61ff; font-size: 12px"
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      High effort & cost
+                    </p>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="
+                        min-width: 28px;
+                        width: 28px;
+                        height: 28px;
+                        background: #f4f1ff;
+                      "
+                    >
+                      <i
+                        class="bi bi-x-lg"
+                        style="color: #7b61ff; font-size: 12px"
+                      ></i>
+                    </div>
+
+                    <p
+                      class="mb-0"
+                      style="color: #5d5d73; font-size: 15px; line-height: 1.6"
+                    >
+                      Upfront fees
+                    </p>
+                  </div>
+                </div>
+
+                <!-- VS CIRCLE -->
+                <div
+                  class="position-absolute top-50 start-50 translate-middle d-none d-md-flex align-items-center justify-content-center rounded-circle"
+                  style="
+                    width: 54px;
+                    height: 54px;
+                    background: #7b61ff;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 14px;
+                    z-index: 2;
+                    box-shadow: 0 4px 12px rgba(123, 97, 255, 0.3);
+                  "
+                >
+                  VS
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="col-md-6">
+                  <!-- Purple Header -->
+                  <div
+                    class="text-center py-4"
+                    style="background: #7b61ff; color: #fff"
+                  >
+                    <h5 class="fw-bold mb-0" style="font-size: 18px">
+                      FlexWork Agent Model
+                    </h5>
+                  </div>
+
+                  <div class="p-4 p-lg-5">
+                    <!-- Item -->
+                    <div class="d-flex align-items-start mb-4">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="
+                            color: #1fa971;
+                            font-size: 13px;
+                            font-weight: 700;
+                          "
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Agent does the work for you
+                      </p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="d-flex align-items-start mb-4">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="color: #1fa971; font-size: 13px"
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Curated & relevant matches only
+                      </p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="d-flex align-items-start mb-4">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="color: #1fa971; font-size: 13px"
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Matches in 24–48 hours
+                      </p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="d-flex align-items-start mb-4">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="color: #1fa971; font-size: 13px"
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Pre-vetted & proven experts
+                      </p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="d-flex align-items-start mb-4">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="color: #1fa971; font-size: 13px"
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Zero upfront cost
+                      </p>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="d-flex align-items-start">
+                      <div
+                        class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                        style="
+                          min-width: 28px;
+                          width: 28px;
+                          height: 28px;
+                          background: #e8f8ee;
+                        "
+                      >
+                        <i
+                          class="bi bi-check-lg"
+                          style="color: #1fa971; font-size: 13px"
+                        ></i>
+                      </div>
+
+                      <p
+                        class="mb-0"
+                        style="
+                          color: #5d5d73;
+                          font-size: 15px;
+                          line-height: 1.6;
+                        "
+                      >
+                        Pay only when you hire
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div
+              class="card border-0 rounded-5 text-white p-4 h-100 shadow-sm bg-primary bg-gradient"
+            >
+              <h3 class="fw-bold mb-5">FlexWork In Numbers</h3>
+
+              <!-- Item -->
+              <div class="d-flex align-items-center mb-4">
+                <div
+                  class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px"
+                >
+                  <i class="bi bi-people fs-4"></i>
+                </div>
+
+                <div class="ms-3">
+                  <h2 class="fw-bold mb-0">1M+</h2>
+                  <p class="mb-0 small">Vetted Professionals</p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex align-items-center mb-4">
+                <div
+                  class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px"
+                >
+                  <i class="bi bi-buildings fs-4"></i>
+                </div>
+
+                <div class="ms-3">
+                  <h2 class="fw-bold mb-0">300K+</h2>
+                  <p class="mb-0 small">Businesses Served</p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex align-items-center mb-4">
+                <div
+                  class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px"
+                >
+                  <i class="bi bi-clock-history fs-4"></i>
+                </div>
+
+                <div class="ms-3">
+                  <h2 class="fw-bold mb-0">24-48 hrs</h2>
+                  <p class="mb-0 small">Average Match Time</p>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="d-flex align-items-center">
+                <div
+                  class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px"
+                >
+                  <i class="bi bi-award fs-4"></i>
+                </div>
+
+                <div class="ms-3">
+                  <h2 class="fw-bold mb-0">98%</h2>
+                  <p class="mb-0 small">Client Satisfaction Rate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HIRING MODELS ================= -->
+
+    <section class="py-5">
+      <div class="mx-auto" style="width: 100%; max-width: 1500px">
+        <div class="bg-white rounded-5 shadow-sm p-3 p-lg-4">
+          <div class="row g-4 align-items-center">
+            <!-- LEFT SIDE -->
+            <div class="col-lg-9">
+              <!-- Heading -->
+              <div
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mb-4"
+              >
+                <div class="mb-3 mb-lg-0">
+                  <h2 class="fw-bold mb-1">Choose how you hire</h2>
+                  <p class="text-muted mb-0 small">
+                    Flexible engagement models for every need.
+                  </p>
+                </div>
+
+                <!-- Tabs -->
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-primary rounded-pill px-4 fw-semibold">
+                    Compare
+                  </button>
+
+                  <button
+                    class="btn btn-light rounded-pill px-4 fw-semibold text-dark border-0"
+                  >
+                    Hourly
+                  </button>
+
+                  <button
+                    class="btn btn-light rounded-pill px-4 fw-semibold text-dark border-0"
+                  >
+                    Monthly
+                  </button>
+
+                  <button
+                    class="btn btn-light rounded-pill px-4 fw-semibold text-dark border-0 position-relative"
+                  >
+                    Project-Based
+
+                    <!-- Popular Badge -->
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                      style="font-size: 10px"
+                    >
+                      Popular
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table align-middle border-0 mb-0">
+                  <tbody>
+                    <tr class="border-0">
+                      <td
+                        class="fw-semibold bg-light rounded-start-4 py-3 px-4 border-0"
+                      >
+                        Best for
+                      </td>
+
+                      <td class="py-3 px-4 border-0">
+                        Short tasks, ad-hoc work
+                      </td>
+
+                      <td class="py-3 px-4 border-0">
+                        Ongoing work, part-time
+                      </td>
+
+                      <td class="py-3 px-4 border-0">
+                        Ongoing work, full-time
+                      </td>
+
+                      <td class="py-3 px-4 border-0">Fixed scope projects</td>
+                    </tr>
+
+                    <tr class="border-0">
+                      <td class="fw-semibold bg-light py-3 px-4 border-0">
+                        Commitment
+                      </td>
+
+                      <td class="py-3 px-4 border-0">Pay as you go</td>
+
+                      <td class="py-3 px-4 border-0">Minimum 1 month</td>
+
+                      <td class="py-3 px-4 border-0">Minimum 1 month</td>
+
+                      <td class="py-3 px-4 border-0">
+                        Until project completion
+                      </td>
+                    </tr>
+
+                    <tr class="border-0">
+                      <td class="fw-semibold bg-light py-3 px-4 border-0">
+                        Billing
+                      </td>
+
+                      <td class="py-3 px-4 border-0">Hourly</td>
+
+                      <td class="py-3 px-4 border-0">Monthly</td>
+
+                      <td class="py-3 px-4 border-0">Monthly</td>
+
+                      <td class="py-3 px-4 border-0">Milestone-based</td>
+                    </tr>
+
+                    <tr class="border-0">
+                      <td class="fw-semibold bg-light py-3 px-4 border-0">
+                        Flexibility
+                      </td>
+
+                      <td class="py-3 px-4 border-0">High</td>
+
+                      <td class="py-3 px-4 border-0">Medium</td>
+
+                      <td class="py-3 px-4 border-0">Medium</td>
+
+                      <td class="py-3 px-4 border-0">Low</td>
+                    </tr>
+
+                    <tr class="border-0">
+                      <td
+                        class="fw-semibold bg-light rounded-bottom-start-4 py-3 px-4 border-0"
+                      >
+                        Start Time
+                      </td>
+
+                      <td class="py-3 px-4 border-0">Instant</td>
+
+                      <td class="py-3 px-4 border-0">1-2 Days</td>
+
+                      <td class="py-3 px-4 border-0">1-2 Days</td>
+
+                      <td class="py-3 px-4 border-0">2-3 Days</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div class="col-lg-3">
+              <div
+                class="bg-light rounded-5 p-4 h-100 d-flex flex-column justify-content-between overflow-hidden"
+              >
+                <!-- Content -->
+                <div>
+                  <h5 class="fw-bold mb-2">Not sure what works?</h5>
+
+                  <p class="text-muted small mb-4">
+                    Let our agent recommend the best option for you.
+                  </p>
+                </div>
+
+                <!-- Bottom Area -->
+                <div class="d-flex justify-content-between gap-3">
+                  <!-- Button -->
+                  <a
+                    href="#"
+                    class="btn btn-warning rounded-3 fw-semibold px-3 py-2 d-inline-flex align-items-center align-self-start"
+                  >
+                    Talk to an Expert
+                    <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+
+                  <!-- Agent Image -->
+                  <img
+                    src="talkToExpert.png"
+                    alt="Agent"
+                    class="img-fluid"
+                    style="
+                      max-height: 120px;
+                      object-fit: contain;
+                      margin-bottom: -16px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIAL ================= -->
+
+    <section class="pb-5">
+      <div class="container">
+        <div
+          class="text-white rounded-4 px-4 px-lg-5 py-4 position-relative overflow-hidden"
+          style="background: #7b7dfc"
+        >
+          <div class="row align-items-center g-4">
+            <!-- Left Content -->
+            <div class="col-lg-3">
+              <h3 class="fw-bold mb-3 lh-sm">
+                Loved by teams <br />
+                that build the future.
+              </h3>
+
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <div class="text-warning fs-6">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <span class="fw-semibold small">4.9/5</span>
+              </div>
+
+              <small class="text-light opacity-75">
+                Based on 500+ reviews
+              </small>
+            </div>
+
+            <!-- Center Testimonial -->
+            <div class="col-lg-6 position-relative">
+              <!-- Left Arrow -->
+              <button
+                class="btn btn-light rounded-circle shadow-sm position-absolute top-50 start-0 translate-middle-y"
+                style="width: 48px; height: 48px; z-index: 2"
+              >
+                <i class="bi bi-chevron-left text-primary"></i>
+              </button>
+
+              <div
+                class="bg-white text-dark rounded-4 px-4 py-3 mx-lg-5 text-center shadow-sm"
+              >
+                <p class="fw-semibold mb-4 text-secondary">
+                  <span class="text-primary fs-1 fw-bold lh-1 mb-2">“</span>
+                  helped us hire a senior engineer in just 36 hours. The quality
+                  of talent and support is unmatched.
+                </p>
+
+                <h6 class="fw-bold mb-4 text-dark">
+                  — Head of Engineering, SaaS Company
+                </h6>
+
+                <!-- Dots -->
+                <div class="d-flex justify-content-center gap-2">
+                  <span
+                    class="bg-primary rounded-circle"
+                    style="width: 8px; height: 8px"
+                  ></span>
+
+                  <span
+                    class="bg-secondary-subtle rounded-circle"
+                    style="width: 8px; height: 8px"
+                  ></span>
+
+                  <span
+                    class="bg-secondary-subtle rounded-circle"
+                    style="width: 8px; height: 8px"
+                  ></span>
+                </div>
+              </div>
+
+              <!-- Right Arrow -->
+              <button
+                class="btn btn-light rounded-circle shadow-sm position-absolute top-50 end-0 translate-middle-y"
+                style="width: 48px; height: 48px; z-index: 2"
+              >
+                <i class="bi bi-chevron-right text-primary"></i>
+              </button>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-3 text-center">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                alt="Team"
+                class="img-fluid rounded-3"
+                style="max-height: 180px; object-fit: contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
